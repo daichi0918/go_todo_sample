@@ -2,9 +2,8 @@ package config
 
 import (
 	"log"
-	// "sample_todo/utils"
 
-	"go get gopkg.in/go-ini/ini.v1"
+	"gopkg.in/ini.v1"
 )
 
 type ConfigList struct {
