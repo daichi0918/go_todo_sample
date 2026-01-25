@@ -615,3 +615,157 @@ net/http.(*conn).serve(0x14000112120, {0x100916930, 0x1400009b950})
 	/usr/local/go/src/net/http/server.go:2109 +0x528
 created by net/http.(*Server).Serve in goroutine 1
 	/usr/local/go/src/net/http/server.go:3493 +0x384
+2026/01/25 09:32:13 server.go:3679: http: panic serving 127.0.0.1:54276: open app/views/templates/navbar.html: no such file or directory
+goroutine 22 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1943 +0xb4
+panic({0x100d86240?, 0x140000bdef0?})
+	/usr/local/go/src/runtime/panic.go:783 +0x120
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:368
+go_sample_todo/app/controllers.generateHTML({0x100debd90, 0x140001b23c0}, {0x100d50c60, 0x100de5be0}, {0x140001a1a88?, 0x0?, 0x72?})
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/server.go:19 +0x258
+go_sample_todo/app/controllers.top({0x100debd90?, 0x140001b23c0?}, 0x140001a1b18?)
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/route_main.go:8 +0x74
+net/http.HandlerFunc.ServeHTTP(0x1010cd9e0?, {0x100debd90?, 0x140001b23c0?}, 0x100a52b98?)
+	/usr/local/go/src/net/http/server.go:2322 +0x38
+net/http.(*ServeMux).ServeHTTP(0x140000ca760?, {0x100debd90, 0x140001b23c0}, 0x14000184640)
+	/usr/local/go/src/net/http/server.go:2861 +0x190
+net/http.serverHandler.ServeHTTP({0x140000f8500?}, {0x100debd90?, 0x140001b23c0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3340 +0xb0
+net/http.(*conn).serve(0x1400018e2d0, {0x100dec3f0, 0x140000bda40})
+	/usr/local/go/src/net/http/server.go:2109 +0x528
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3493 +0x384
+2026/01/25 09:32:14 server.go:3679: http: panic serving 127.0.0.1:54277: open app/views/templates/navbar.html: no such file or directory
+goroutine 24 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1943 +0xb4
+panic({0x100d86240?, 0x140001d2390?})
+	/usr/local/go/src/runtime/panic.go:783 +0x120
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:368
+go_sample_todo/app/controllers.generateHTML({0x100debd90, 0x140001b2690}, {0x100d50c60, 0x100de5be0}, {0x14000072a88?, 0x0?, 0x72?})
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/server.go:19 +0x258
+go_sample_todo/app/controllers.top({0x100debd90?, 0x140001b2690?}, 0x14000072b18?)
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/route_main.go:8 +0x74
+net/http.HandlerFunc.ServeHTTP(0x1010cd9e0?, {0x100debd90?, 0x140001b2690?}, 0x100a52b98?)
+	/usr/local/go/src/net/http/server.go:2322 +0x38
+net/http.(*ServeMux).ServeHTTP(0x140000ca820?, {0x100debd90, 0x140001b2690}, 0x14000184780)
+	/usr/local/go/src/net/http/server.go:2861 +0x190
+net/http.serverHandler.ServeHTTP({0x140000f86c0?}, {0x100debd90?, 0x140001b2690?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3340 +0xb0
+net/http.(*conn).serve(0x1400018e480, {0x100dec3f0, 0x140000bda40})
+	/usr/local/go/src/net/http/server.go:2109 +0x528
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3493 +0x384
+2026/01/25 09:32:18 server.go:3679: http: panic serving 127.0.0.1:54278: open app/views/templates/navbar.html: no such file or directory
+goroutine 26 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1943 +0xb4
+panic({0x100d86240?, 0x140001d27b0?})
+	/usr/local/go/src/runtime/panic.go:783 +0x120
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:368
+go_sample_todo/app/controllers.generateHTML({0x100debd90, 0x140001b2870}, {0x100d50c60, 0x100de5be0}, {0x14000072a88?, 0x0?, 0x72?})
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/server.go:19 +0x258
+go_sample_todo/app/controllers.top({0x100debd90?, 0x140001b2870?}, 0x14000072b18?)
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/route_main.go:8 +0x74
+net/http.HandlerFunc.ServeHTTP(0x1010cd9e0?, {0x100debd90?, 0x140001b2870?}, 0x100a52b98?)
+	/usr/local/go/src/net/http/server.go:2322 +0x38
+net/http.(*ServeMux).ServeHTTP(0x140000ca880?, {0x100debd90, 0x140001b2870}, 0x140001848c0)
+	/usr/local/go/src/net/http/server.go:2861 +0x190
+net/http.serverHandler.ServeHTTP({0x140000f8800?}, {0x100debd90?, 0x140001b2870?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3340 +0xb0
+net/http.(*conn).serve(0x1400018e5a0, {0x100dec3f0, 0x140000bda40})
+	/usr/local/go/src/net/http/server.go:2109 +0x528
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3493 +0x384
+2026/01/25 09:32:19 server.go:3679: http: panic serving 127.0.0.1:54279: open app/views/templates/navbar.html: no such file or directory
+goroutine 34 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1943 +0xb4
+panic({0x100d86240?, 0x14000210420?})
+	/usr/local/go/src/runtime/panic.go:783 +0x120
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:368
+go_sample_todo/app/controllers.generateHTML({0x100debd90, 0x140002260f0}, {0x100d50c60, 0x100de5be0}, {0x14000207a88?, 0x0?, 0x72?})
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/server.go:19 +0x258
+go_sample_todo/app/controllers.top({0x100debd90?, 0x140002260f0?}, 0x14000207b18?)
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/route_main.go:8 +0x74
+net/http.HandlerFunc.ServeHTTP(0x1010cd9e0?, {0x100debd90?, 0x140002260f0?}, 0x100a52b98?)
+	/usr/local/go/src/net/http/server.go:2322 +0x38
+net/http.(*ServeMux).ServeHTTP(0x14000216020?, {0x100debd90, 0x140002260f0}, 0x14000224000)
+	/usr/local/go/src/net/http/server.go:2861 +0x190
+net/http.serverHandler.ServeHTTP({0x14000220000?}, {0x100debd90?, 0x140002260f0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3340 +0xb0
+net/http.(*conn).serve(0x14000214000, {0x100dec3f0, 0x140000bda40})
+	/usr/local/go/src/net/http/server.go:2109 +0x528
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3493 +0x384
+2026/01/25 09:32:24 server.go:3679: http: panic serving 127.0.0.1:54285: open app/views/templates/navbar.html: no such file or directory
+goroutine 36 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1943 +0xb4
+panic({0x100d86240?, 0x14000286360?})
+	/usr/local/go/src/runtime/panic.go:783 +0x120
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:368
+go_sample_todo/app/controllers.generateHTML({0x100debd90, 0x140002840f0}, {0x100d50c60, 0x100de5be0}, {0x14000207a88?, 0x0?, 0x72?})
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/server.go:19 +0x258
+go_sample_todo/app/controllers.top({0x100debd90?, 0x140002840f0?}, 0x14000207b18?)
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/route_main.go:8 +0x74
+net/http.HandlerFunc.ServeHTTP(0x1010cd9e0?, {0x100debd90?, 0x140002840f0?}, 0x100a52b98?)
+	/usr/local/go/src/net/http/server.go:2322 +0x38
+net/http.(*ServeMux).ServeHTTP(0x1400028a000?, {0x100debd90, 0x140002840f0}, 0x14000224140)
+	/usr/local/go/src/net/http/server.go:2861 +0x190
+net/http.serverHandler.ServeHTTP({0x14000220180?}, {0x100debd90?, 0x140002840f0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3340 +0xb0
+net/http.(*conn).serve(0x14000214120, {0x100dec3f0, 0x140000bda40})
+	/usr/local/go/src/net/http/server.go:2109 +0x528
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3493 +0x384
+2026/01/25 09:32:54 server.go:3679: http: panic serving 127.0.0.1:54293: open app/views/templates/navbar.html: no such file or directory
+goroutine 37 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1943 +0xb4
+panic({0x100d86240?, 0x14000210900?})
+	/usr/local/go/src/runtime/panic.go:783 +0x120
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:368
+go_sample_todo/app/controllers.generateHTML({0x100debd90, 0x140002263c0}, {0x100d50c60, 0x100de5be0}, {0x14000208a88?, 0x0?, 0x72?})
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/server.go:19 +0x258
+go_sample_todo/app/controllers.top({0x100debd90?, 0x140002263c0?}, 0x14000208b18?)
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/route_main.go:8 +0x74
+net/http.HandlerFunc.ServeHTTP(0x1010cd9e0?, {0x100debd90?, 0x140002263c0?}, 0x100a52b98?)
+	/usr/local/go/src/net/http/server.go:2322 +0x38
+net/http.(*ServeMux).ServeHTTP(0x140002160a0?, {0x100debd90, 0x140002263c0}, 0x14000224280)
+	/usr/local/go/src/net/http/server.go:2861 +0x190
+net/http.serverHandler.ServeHTTP({0x14000220200?}, {0x100debd90?, 0x140002263c0?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3340 +0xb0
+net/http.(*conn).serve(0x140002141b0, {0x100dec3f0, 0x140000bda40})
+	/usr/local/go/src/net/http/server.go:2109 +0x528
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3493 +0x384
+2026/01/25 09:32:56 server.go:3679: http: panic serving 127.0.0.1:54295: open app/views/templates/navbar.html: no such file or directory
+goroutine 39 [running]:
+net/http.(*conn).serve.func1()
+	/usr/local/go/src/net/http/server.go:1943 +0xb4
+panic({0x100d86240?, 0x14000210d20?})
+	/usr/local/go/src/runtime/panic.go:783 +0x120
+html/template.Must(...)
+	/usr/local/go/src/html/template/template.go:368
+go_sample_todo/app/controllers.generateHTML({0x100debd90, 0x14000226690}, {0x100d50c60, 0x100de5be0}, {0x14000208a88?, 0x0?, 0x72?})
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/server.go:19 +0x258
+go_sample_todo/app/controllers.top({0x100debd90?, 0x14000226690?}, 0x14000208b18?)
+	/Users/daichi/Workspace/study/udemy/go_sample_todo/app/controllers/route_main.go:8 +0x74
+net/http.HandlerFunc.ServeHTTP(0x1010cd9e0?, {0x100debd90?, 0x14000226690?}, 0x100a52b98?)
+	/usr/local/go/src/net/http/server.go:2322 +0x38
+net/http.(*ServeMux).ServeHTTP(0x14000216100?, {0x100debd90, 0x14000226690}, 0x140002243c0)
+	/usr/local/go/src/net/http/server.go:2861 +0x190
+net/http.serverHandler.ServeHTTP({0x14000220380?}, {0x100debd90?, 0x14000226690?}, 0x6?)
+	/usr/local/go/src/net/http/server.go:3340 +0xb0
+net/http.(*conn).serve(0x140002142d0, {0x100dec3f0, 0x140000bda40})
+	/usr/local/go/src/net/http/server.go:2109 +0x528
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3493 +0x384
