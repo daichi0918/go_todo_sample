@@ -7,6 +7,7 @@ import (
 	"regexp"
 	"strconv"
 
+	"go_sample_todo/app/models"
 	"go_sample_todo/config"
 )
 
@@ -46,6 +47,17 @@ func parseURL(fn func(http.ResponseWriter, *http.Request, int)) http.HandlerFunc
 	}
 }
 
+func session(request *http.Request) (sess models.Session, err error) {
+	cookie, err := request.Cookie("_cookie")
+	if err == nil {
+		sess = models.Session{UUID: cookie.Value}
+		if ok, _ := sess.CheckSession(); !ok {
+			err = fmt.Errorf("Invalid session")
+		}
+	}
+	return sess, err
+}
+
 func StartMainServer() error {
 	files := http.FileServer(http.Dir(config.Config.Static))
 	http.Handle("/static/", http.StripPrefix("/static/", files))
@@ -55,7 +67,7 @@ func StartMainServer() error {
 	http.HandleFunc("/login", login)
 	// http.HandleFunc("/logout", logout)
 	http.HandleFunc("/authenticate", authenticate)
-	// http.HandleFunc("/todos", index)
+	http.HandleFunc("/todos", index)
 	// http.HandleFunc("/todos/new", todoNew)
 	// http.HandleFunc("/todos/save", todoSave)
 	// http.HandleFunc("/todos/edit/", parseURL(todoEdit))
