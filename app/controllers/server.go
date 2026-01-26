@@ -52,9 +52,9 @@ func StartMainServer() error {
 
 	http.HandleFunc("/", top) //top
 	http.HandleFunc("/signup", signup)
-	// http.HandleFunc("/login", login)
+	http.HandleFunc("/login", login)
 	// http.HandleFunc("/logout", logout)
-	// http.HandleFunc("/authenticate", authenticate)
+	http.HandleFunc("/authenticate", authenticate)
 	// http.HandleFunc("/todos", index)
 	// http.HandleFunc("/todos/new", todoNew)
 	// http.HandleFunc("/todos/save", todoSave)
