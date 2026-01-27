@@ -12,7 +12,7 @@ type User struct {
 	Email     string
 	PassWord  string
 	CreatedAt time.Time
-	// Todos     []Todo
+	Todos     []Todo
 }
 
 type Session struct {
