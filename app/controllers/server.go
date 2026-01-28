@@ -59,10 +59,12 @@ func session(request *http.Request) (sess models.Session, err error) {
 }
 
 func StartMainServer() error {
+	// /static 以下のリクエストを静的ファイルとして配信
 	files := http.FileServer(http.Dir(config.Config.Static))
 	http.Handle("/static/", http.StripPrefix("/static/", files))
 
-	http.HandleFunc("/", top) //top
+
+	http.HandleFunc("/", top) // "/"はブラウザの呼び出し、topはroute_main.goを呼び出している
 	http.HandleFunc("/signup", signup)
 	http.HandleFunc("/login", login)
 	http.HandleFunc("/logout", logout)
@@ -72,7 +74,7 @@ func StartMainServer() error {
 	http.HandleFunc("/todos/save", todoSave)
 	http.HandleFunc("/todos/edit/", parseURL(todoEdit))
 	http.HandleFunc("/todos/update/", parseURL(todoUpdate))
-	// http.HandleFunc("/todos/delete/", parseURL(todoDelete))
+	http.HandleFunc("/todos/delete/", parseURL(todoDelete))
 
 	return http.ListenAndServe(":"+config.Config.Port, nil)
 }
